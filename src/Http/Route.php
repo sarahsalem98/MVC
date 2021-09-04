@@ -33,7 +33,7 @@ public function resolve(){
     $action =self::$routes[$method][$path] ?? false;
 
   if (!array_key_exists($path,self::$routes[$method])){
-      view::makeError('404');
+      view::makeError ('404');
   }
  if(is_callable($action)){
      call_user_func_array($action,[]);
